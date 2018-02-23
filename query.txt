@@ -1,0 +1,9 @@
+my_db=# select responses.id,score,sentiment from responses,mentions,themes where
+ responses.id=mentions.response_id and mentions.theme_id=themes.id and mentions.
+organization_id=1;
+
+
+my_db=# copy (select responses.id,score,sentiment from responses,mentions,themes
+ where responses.id=mentions.response_id and mentions.theme_id=themes.id and men
+tions.organization_id=1) to 'D:\pre_data.csv' csv header;
+COPY 1560
